@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoTri.VN - Học Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">MoTri.VN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="course.html">Khóa học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Bảng giá</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Đăng nhập</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Đăng ký</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="emailInput" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="emailInput" placeholder="Nhập email của bạn" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="passwordInput" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="passwordInput" placeholder="Nhập mật khẩu" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <a href="forgot-password.html">Quên mật khẩu?</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="regEmailInput" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="regEmailInput" placeholder="Nhập email của bạn" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="regPasswordInput" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="regPasswordInput" placeholder="Nhập mật khẩu" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="regConfirmPasswordInput" class="form-label">Xác nhận mật khẩu</label>
+                                    <input type="password" class="form-control" id="regConfirmPasswordInput" placeholder="Xác nhận mật khẩu" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="regNameInput" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="regNameInput" placeholder="Nhập họ và tên" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <p>Đã có tài khoản? <a href="#" data-bs-toggle="tab" data-bs-target="#login">Đăng nhập</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-cover overlay" style="background-image: url('https://degrees.snu.edu/hs-fs/hubfs/AdobeStock_518657595.jpeg');">
+        <div class="container">
+            <h1>Chúng tôi giúp bạn học những điều mới mẻ</h1>
+            <p class="text-light">Học tập mọi lúc, mọi nơi với các khóa học chất lượng.</p>
+            <a href="register.html" class="btn btn-primary">Bắt đầu học ngay</a>
+        </div>
+    </section>
+
+    <!-- Feature Blocks -->
+    <section class="bg-gray overflow-md-hidden">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-4 col-lg-5 align-self-end">
+                    <img class="img-fluid w-100" src="images/banner.png.jpg" alt="banner-feature">
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    <div class="row feature-blocks bg-gray justify-content-between">
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">100%</h3>
+                            <p>Cam kết của chúng tôi về chất lượng và sự xuất sắc đảm bảo rằng mọi khóa học đều đáp ứng các tiêu chuẩn giáo dục cao.</p>
+                        </div>
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">50 Khóa Học</h3>
+                            <p>Chúng tôi cung cấp nhiều khóa học đa dạng phù hợp với nhiều phong cách học tập khác nhau, đảm bảo mỗi học viên đều tìm được khóa học phù hợp nhất.</p>
+                        </div>
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">3 thành viên</h3>
+                            <p>Gặp gỡ đội ngũ tận tụy của chúng tôi, những người đam mê nâng cao giáo dục trực tuyến.</p>
+                        </div>
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-write mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Kinh nghiệm</h3>
+                            <p>Đội ngũ của chúng tôi có nhiều kinh nghiệm trong lĩnh vực giáo dục và công nghệ, cam kết mang lại trải nghiệm học tập tốt nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-2 order-md-1">
+                    <h2 class="section-title">Giới thiệu</h2>
+                    <p>MoTri.VN cam kết chuyển đổi giáo dục trực tuyến bằng cách kết nối giáo viên và học sinh trên toàn thế giới. Sứ mệnh của chúng tôi là cung cấp trải nghiệm học tập dễ tiếp cận, hấp dẫn và sáng tạo, thúc đẩy sự hợp tác và cộng đồng giữa người dùng.</p>
+                    <a href="about.html" class="btn btn-outline-primary">Learn more</a>
+                </div>
+                <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+                    <img class="img-fluid w-100" src="images/about/about-us.jpg" alt="about image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center section-title justify-content-between">
+                        <h2 class="mb-0 text-nowrap mr-3">Our Course</h2>
+                        <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+                        <div>
+                            <a href="courses.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Course List -->
+            <div class="row justify-content-center">
+                <!-- Course Item -->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card p-0 border-primary rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="images/courses/course-1.jpg" alt="course thumb">
+                        <div class="card-body">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
+                                <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
+                            </ul>
+                            <a href="course-single.html">
+                                <h4 class="card-title">Photography</h4>
+                            </a>
+                            <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Item -->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card p-0 border-primary rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="images/courses/course-2.jpg" alt="course thumb">
+                        <div class="card-body">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
+                                <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
+                            </ul>
+                            <a href="course-single.html">
+                                <h4 class="card-title">Programming</h4>
+                            </a>
+                            <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Item -->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card p-0 border-primary rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="images/courses/course-3.jpg" alt="course thumb">
+                        <div class="card-body">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
+                                <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
+                            </ul>
+                            <a href="course-single.html">
+                                <h4 class="card-title">Lifestyle Archives</h4>
+                            </a>
+                            <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Item -->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card p-0 border-primary rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="images/courses/course-4.jpg" alt="course thumb">
+                        <div class="card-body">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
+                                <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
+                            </ul>
+                            <a href="course-single.html">
+                                <h4 class="card-title">Complete Freelancing</h4>
+                            </a>
+                            <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Item -->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card p-0 border-primary rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="images/courses/course-5.jpg" alt="course thumb">
+                        <div class="card-body">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
+                                <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
+                            </ul>
+                            <a href="course-single.html">
+                                <h4 class="card-title">Branding Design</h4>
+                            </a>
+                            <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Item -->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card p-0 border-primary rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="images/courses/course-6.jpg" alt="course thumb">
+                        <div class="card-body">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
+                                <li class="list-inline-item"><a class="text-color" href="course-single.html">Humanities</a></li>
+                            </ul>
+                            <a href="course-single.html">
+                                <h4 class="card-title">Art Design</h4>
+                            </a>
+                            <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile See All Button -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="courses.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">See all</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="text-white font-secondary mb-0">Click to Join the Advance Workshop</h6>
+                    <h2 class="section-title text-white">Training In Advance Networking</h2>
+                    <a href="contact.html" class="btn btn-light">Join now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <a href="#" class="logo-footer text-lighten">MoTri.VN</a>
+                    <p class="text-light mt-4">
+                        23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA<br>
+                        +1 (2) 345 6789<br>
+                        +1 (2) 345 6789<br>
+                        <a href="mailto:contact@motri.vn" class="text-light">contact@motri.vn</a>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="text-lighten">COMPANY</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="about.html" class="text-light">Giới Thiệu</a></li>
+                        <li class="mb-3"><a href="course.html" class="text-light">Khóa học</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Sự kiện</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Giáo viên</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Thông Báo</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Liên hệ ngay</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="text-lighten">LINKS</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="course.html" class="text-light">Courses</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Events</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Notice</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Scholarship</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="text-lighten">SUPPORT</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-light">Forums</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Documentation</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Language</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">Release Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="text-lighten">RECOMMEND</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-light">WordPress</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">LearnPress</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">WooCommerce</a></li>
+                        <li class="mb-3"><a href="#" class="text-light">bbPress</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top pt-4">
+                <p class="text-light">Copyright © 2025, designed & developed by MoTri Team</p>
+                <div class="footer-social">
+                    <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
