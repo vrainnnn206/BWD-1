@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4A4A4A;
+  background-color: #fff;
 }
 
 p, .paragraph {
@@ -96,6 +97,7 @@ h6, .h6 {
   transition: 0.2s ease;
   overflow: hidden;
   white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 .btn::before {
   position: absolute;
@@ -211,6 +213,7 @@ a,
 a:hover,
 a:focus {
   text-decoration: none;
+  color: inherit;
 }
 
 a,
@@ -259,6 +262,17 @@ a h4:hover {
 }
 .section-title {
   margin-bottom: 30px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #E76F51;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .bg-cover {
@@ -282,8 +296,8 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background: #264653;
-  opacity: 0.8;
+  background: #424a91;
+  opacity: 0.5;
 }
 
 .outline-0 {
@@ -445,10 +459,16 @@ textarea.form-control {
 }
 
 .top-header {
+  background: #2A9D8F !important;
+  border-bottom: 1px solid #eee;
   font-size: 12px;
   transition: transform 0.2s ease;
   transform-origin: top;
   font-weight: 600;
+}
+.top-header a,
+.top-header a:visited {
+  color: #fff !important;
 }
 .top-header.hide {
   transform: scaleY(0);
@@ -457,6 +477,7 @@ textarea.form-control {
 
 .navigation {
   background: linear-gradient(to right, #2A9D8F 0%, #E76F51 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 991px) {
   .navigation {
@@ -886,6 +907,7 @@ link:focus,
   background: #fff;
   border-radius: 0;
   padding-left: 25px;
+  border: 1px solid #e0e0e0;
 }
 .form-control:focus {
   border-color: #2A9D8F;
@@ -910,6 +932,30 @@ link:focus,
   padding-top: 275px;
 }
 
+/* Footer custom background color */
+.footer.bg-footer {
+  background: #22223B !important;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.footer .text-lighten,
+.footer .text-light {
+  color: #b5b5b7 !important;
+}
+.footer a.text-light:hover,
+.footer a.text-lighten:hover {
+  color: #2A9D8F !important;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: #2A9D8F;
+}
+
 /* /footer */
 .filter-controls li {
   cursor: pointer;
@@ -922,3 +968,121 @@ link:focus,
 .filter-controls li:hover {
   color: #2A9D8F;
 }
+.hero-section {
+  position: relative;
+  padding: 80px 0 60px 0;
+}
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 62, 80, 0.5);
+  z-index: 1;
+}
+.hero-section .container, .hero-section .row, .hero-section .col-lg-8 {
+  position: relative;
+  z-index: 2;
+}
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+.newsletter {
+  background: #2A9D8F;
+  padding: 40px 0;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+.input-wrapper {
+  display: flex;
+  max-width: 400px;
+}
+.input-wrapper input {
+  border-radius: 4px 0 0 4px;
+}
+.input-wrapper button {
+  border-radius: 0 4px 4px 0;
+}
+.bg-footer {
+  background: #22223B;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.footer .logo-footer img {
+  max-width: 120px;
+}
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 40px 0 30px 0;
+  }
+  .newsletter {
+    padding: 20px 0;
+  }
+}
+ .horizontal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+    .horizontal-nav li {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    .horizontal-nav li a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .horizontal-nav li a:hover {
+      color: #2A9D8F !important;
+    }
+    @media (max-width: 991px) {
+      .horizontal-nav {
+        justify-content: center;
+      }
+      .horizontal-nav li {
+        margin-right: 15px;
+      }
+    }
+/* --- SCHOOLARSHIP PAGE CUSTOM CSS --- */
+.top-header { background: #fff; border-bottom: 1px solid #eee; }
+.top-header a { color: #22223b; }
+.header .navbar { background: #22223b; }
+.header .navbar .nav-link { color: #fff !important; }
+.page-title-section {
+  background: url('https://images.unsplash.com/photo-1516321310769-4c4e5b68e17f') center/cover;
+  padding: 60px 0;
+  position: relative;
+}
+.page-title-section:before {
+  content: "";
+  position: absolute;
+  top:0;left:0;right:0;bottom:0;
+  background: rgba(34,34,59,0.7);
+}
+.page-title-section .container, .page-title-section .row, .page-title-section .col-md-8 {
+  position: relative;
+  z-index: 2;
+}
+.page-title-section h2, .page-title-section p, .page-title-section .custom-breadcrumb {
+  color: #fff;
+}
+.section { padding: 60px 0; }
+.card { border-radius: 0; border: none; box-shadow: 0 2px 16px rgba(44,62,80,0.08);}
+.newsletter { background: #2A9D8F; padding: 40px 0; }
+.newsletter h3 { color: #fff; }
+.footer.bg-footer { background: #22223b; color: #fff; padding: 40px 0 0 0; }
+.footer .text-color { color: #2A9D8F !important; }
+.footer h4 { color: #fff; }
+.copyright { background: #22223b; color: #aaa; }
+.input-wrapper { display: flex; max-width: 400px; }
+.input-wrapper input { border-radius: 4px 0 0 4px; }
+.input-wrapper button { border-radius: 0 4px 4px 0; }
+/* --- END SCHOOLARSHIP PAGE CUSTOM CSS --- */
