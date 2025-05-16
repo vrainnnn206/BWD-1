@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Sự kiện - MoTri.VN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap & Themify Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Thanh trên cùng -->
+  <div class="top-header py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <a href="tel:+443003030266"><strong>GỌI</strong> +44 300 303 0266</a>
+        <a href="#" class="ms-3"><i class="ti-facebook"></i></a>
+        <a href="#" class="ms-2"><i class="ti-twitter-alt"></i></a>
+        <a href="#" class="ms-2"><i class="ti-github"></i></a>
+        <a href="#" class="ms-2"><i class="ti-instagram"></i></a>
+      </div>
+      <div>
+        <a href="notice.html" class="me-3">Thông báo</a>
+        <a href="research.html" class="me-3">Nghiên cứu</a>
+        <a href="schoolarship.html" class="me-3">Học bổng</a>
+        <a href="#" class="me-3" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Đăng ký</a>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" style="font-size: 2rem;">MoTri.VN</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="course.html">Khóa học</a></li>
+          <li class="nav-item"><a class="nav-link" href="schoolarship.html">Học bổng</a></li>
+          <li class="nav-item"><a class="nav-link" href="teacher.html">Giáo viên</a></li>
+          <li class="nav-item"><a class="nav-link active" href="events.html">Sự kiện</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal Đăng nhập -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email của bạn" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Mật khẩu</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+          </form>
+          <div class="text-center mt-3">
+            <a href="#">Quên mật khẩu?</a>
+          </div>
+          <div class="text-center mt-3">
+            <p>Chưa có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Đăng ký</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Đăng ký -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Đăng ký</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="signupName" class="form-label">Họ và tên</label>
+              <input type="text" class="form-control" id="signupName" placeholder="Nhập họ và tên" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="Nhập email" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Mật khẩu</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Nhập mật khẩu" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tiêu đề trang -->
+  <section class="page-title-section overlay" style="background: url('images/backgrounds/page-title.jpg') center/cover; position: relative;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-inline custom-breadcrumb mb-2">
+            <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="index.html">Trang chủ</a></li>
+            <li class="list-inline-item text-white h3 font-secondary nasted">Sự kiện</li>
+          </ul>
+          <p class="text-lighten mb-0">Các sự kiện nổi bật, hội thảo, workshop và hoạt động ngoại khóa của MoTri.VN dành cho học viên và cộng đồng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Danh sách sự kiện -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <!-- Sự kiện 1 -->
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+              <img class="card-img-top rounded-0" src="images/events/event-1.jpg" alt="event thumb">
+              <div class="card-date"><span>18</span><br>Tháng 12</div>
+            </div>
+            <div class="card-body">
+              <p><i class="ti-location-pin text-primary me-2"></i>TP. Hồ Chí Minh</p>
+              <a href="#">
+                <h4 class="card-title">Hội thảo định hướng nghề nghiệp 2025</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Sự kiện 2 -->
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+              <img class="card-img-top rounded-0" src="images/events/event-2.jpg" alt="event thumb">
+              <div class="card-date"><span>21</span><br>Tháng 12</div>
+            </div>
+            <div class="card-body">
+              <p><i class="ti-location-pin text-primary me-2"></i>Hà Nội</p>
+              <a href="#">
+                <h4 class="card-title">Workshop: Kỹ năng mềm cho sinh viên</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Sự kiện 3 -->
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+              <img class="card-img-top rounded-0" src="images/events/event-3.jpg" alt="event thumb">
+              <div class="card-date"><span>23</span><br>Tháng 12</div>
+            </div>
+            <div class="card-body">
+              <p><i class="ti-location-pin text-primary me-2"></i>Đà Nẵng</p>
+              <a href="#">
+                <h4 class="card-title">Giao lưu ngoại khóa: Kết nối & Sáng tạo</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Thêm các sự kiện khác nếu muốn -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <span class="logo-footer" style="font-size: 2rem; font-weight: bold; color: #fff; display: inline-block; margin-bottom: 24px;">MoTri.VN</span>
+          <ul class="list-unstyled">
+            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, USA</li>
+            <li class="mb-2">+1 (2) 345 6789</li>
+            <li class="mb-2">contact@motri.vn</li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="mb-5">CÔNG TY</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="about.html">Về chúng tôi</a></li>
+            <li class="mb-3"><a class="text-color" href="teacher.html">Giáo viên</a></li>
+            <li class="mb-3"><a class="text-color" href="contact.html">Liên hệ</a></li>
+            <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="mb-5">LIÊN KẾT</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="course.html">Khóa học</a></li>
+            <li class="mb-3"><a class="text-color" href="events.html">Sự kiện</a></li>
+            <li class="mb-3"><a class="text-color" href="notice.html">Thông báo</a></li>
+            <li class="mb-3"><a class="text-color" href="schoolarship.html">Học bổng</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="mb-5">HỖ TRỢ</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Diễn đàn</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Tài liệu</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Ngôn ngữ</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Trạng thái phát hành</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="mb-5">ĐỀ XUẤT</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
+            <li class="mb-3"><a class="text-color" href="#">LearnPress</a></li>
+            <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
+            <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Thiết kế & phát triển bởi MoTri Team</p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <a class="d-inline-block p-2" href="#"><i class="ti-facebook text-primary"></i></a>
+            <a class="d-inline-block p-2" href="#"><i class="ti-twitter-alt text-primary"></i></a>
+            <a class="d-inline-block p-2" href="#"><i class="ti-github text-primary"></i></a>
+            <a class="d-inline-block p-2" href="#"><i class="ti-instagram text-primary"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
